@@ -3,50 +3,70 @@
  * @description  Main Module
  * @return {Object} an object exposing methods to be used to manipulate a linked list
  */
-function linkedListGenerator(){
-      var head=null;
-      var tail= null;
+function linkedListGenerator() {
+  var head = null;
+  var tail = null;
 
-      function getHead(){
-        return head;
-      }
-      function getTail(){
-        return tail;
-      }
+  function getHead() {
+    return head;
+  }
 
-      function add(value){
-        var newNode={
-          value:value,
-          next:null
-        }
+  function getTail() {
+    return tail;
+  }
 
-        if (head===null ){
-          tail=newNode;
-          head=newNode;
-        }else if(tail.next===null){
-          tail=newNode;
-      }
-        return newNode;
+  function add(value) {
+    var newNode = {
+      value: value,
+      next: null
+    }
+
+    if (head === null) {
+      head = newNode;
+      tail = newNode
+    } else {
+      tail.next = newNode;
+      tail = newNode;
+    }
+    return newNode;
   };
 
 
-      function remove(number){
+  function remove(number) {
 
+  }
+
+  function get(number) {
+    var findNode = head;
+    var count = 0;
+    if (findNode === null) {
+      return false;
+    }
+    while (count < number) {
+      findNode = findNode.next;
+      if (findNode === null) {
+        return false
       }
-      function get(number){
+      count++
 
-      }
-      function insert(value,number){
+    }
 
-      }
+    return findNode;
+
+  }
 
 
-  return{
-    getHead:getHead,
-    getTail:getTail,
-    add:add,
-    remove:remove,
-    get:get,
-    insert:insert,
+  function insert(value, number) {
+
+  }
+
+
+  return {
+    getHead: getHead,
+    getTail: getTail,
+    add: add,
+    remove: remove,
+    get: get,
+    insert: insert,
   }
 };
