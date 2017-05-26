@@ -33,7 +33,17 @@ function linkedListGenerator() {
 
 
   function remove(number) {
+    var newNode= get(number);
+    var prevNode=get(number - 1);
 
+    if (newNode===false) {
+      return false
+    }else if (number===0) {
+      head=newNode.next
+    }if (newNode.next===null) {
+      tail=prevNode
+    }
+    prevNode.next=newNode.next;
   }
 
   function get(number) {
@@ -47,17 +57,17 @@ function linkedListGenerator() {
       if (findNode === null) {
         return false
       }
+
       count++
 
     }
-
     return findNode;
 
   }
 
 
   function insert(value, number) {
-
+   
   }
 
 
