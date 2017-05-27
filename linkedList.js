@@ -70,7 +70,7 @@ function linkedListGenerator() {
   function insert(value, number) {
 var prevNode=get(number-1)
 var curNode = get(number);
-var heck=head;
+
     var newNode = {
       value: value,
       next: null
