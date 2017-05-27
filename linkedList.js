@@ -75,7 +75,7 @@ var curNode = get(number);
       value: value,
       next: null
     }
-    var count = 0;
+
 
     if (get(number)===false|| number<0) {
       return false
